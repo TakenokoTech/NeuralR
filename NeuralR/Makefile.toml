@@ -1,6 +1,10 @@
 [tasks.build]
 description = "build all"
-dependencies = ["build-android", "build-ios", "build-python"]
+dependencies = ["build-mobile", "build-python"]
+
+[tasks.build-mobile]
+description = "build mobile"
+dependencies = ["build-android", "build-ios"]
 
 [tasks.build-android]
 description = "build android"

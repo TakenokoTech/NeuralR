@@ -10,4 +10,4 @@ crate-type = ["staticlib", "dylib"]
 pyo3 = { version = "0.23.4", optional = true }
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
-pyo3 = { version = "0.23.4" }
+pyo3 = { version = "*" }
