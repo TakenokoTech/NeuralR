@@ -1,0 +1,15 @@
+[tasks.build]
+description = "build all"
+dependencies = ["build-android", "build-ios", "build-python"]
+
+[tasks.build-android]
+description = "build android"
+script = ['cargo ndk -t armeabi-v7a -t arm64-v8a -o ./target build --release']
+
+[tasks.build-ios]
+description = "build ios"
+script = ['cargo build --target aarch64-apple-ios --release']
+
+[tasks.build-python]
+description = "build python"
+script = ['python -m venv .venv && maturin develop --release']
